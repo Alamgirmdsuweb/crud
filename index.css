@@ -265,7 +265,6 @@ i {
 .ADDAddressErr i {
     color: green;
     margin-left: 75px;
-    /* margin-bottom: 102px; */
     position: relative;
     position: absolute;
 }

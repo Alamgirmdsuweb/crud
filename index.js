@@ -36,7 +36,6 @@ let num = "";
 let editId = "";
 
 const buildTable = (data) => {
-    console.log("data", data);
     let tableData = "";
     data.map((users, i) => {
         tableData += `<tr>
@@ -64,11 +63,11 @@ window.onload = function () {
         .then((objectData) => {
             editId = 1;
             // onload first row show  in edit details
-            
+
             iName.value = objectData[0].name;
-           
+
             iEmail.value = objectData[0].email;
-         
+
             textarea.value = objectData[0].address.city;
 
             arrayFromApi.push(objectData);
@@ -121,12 +120,11 @@ function Save() {
                 });
 
                 buildTable(dataForTable);
-           
-                UserName.value='';
-                Email.value='';
-                textArea.value= '';
 
-    
+                UserName.value = "";
+                Email.value = "";
+                textArea.value = "";
+                // create  value add id Edit details
                 
                 iName.value = dataForTable[0].name;
 
@@ -172,7 +170,6 @@ function deletCon() {
     const newValue = dataForTable.filter(
         (newValue, index) => newValue.id != num
     );
-    console.log("newValue", newValue);
     dltPupup.classList.remove("Modal1");
 
     dataForTable = newValue;
